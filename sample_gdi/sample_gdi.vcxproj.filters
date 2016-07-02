@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\common\application_win.cc">
+      <Filter>src\vue</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cc">
+      <Filter>src\vue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\view_win.cc">
+      <Filter>src\vue</Filter>
+    </ClCompile>
+    <ClCompile Include="db.cpp">
+      <Filter>src\db</Filter>
+    </ClCompile>
+    <ClCompile Include="pokemon.cpp">
+      <Filter>src\object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{f3f5b01d-66bd-4fd8-8800-6295a5fe31c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\object">
+      <UniqueIdentifier>{cb8b138c-1704-49ed-911c-5e94c7881141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vue">
+      <UniqueIdentifier>{62cee553-2dbd-4ec8-b5f7-58f5dd37c06e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vue\html">
+      <UniqueIdentifier>{8db8f370-58ce-4198-a52a-edfd5ade1181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\db">
+      <UniqueIdentifier>{3b5eb41f-03b3-4e6d-b396-995e77724dfc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ajouter.html">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="fnord.html">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="index.html">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="jquery.js">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="json.js">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="main.css">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="main.js">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="reset.css">
+      <Filter>src\vue\html</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nature.h">
+      <Filter>src\object</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>src\object</Filter>
+    </ClInclude>
+    <ClInclude Include="db.h">
+      <Filter>src\db</Filter>
+    </ClInclude>
+    <ClInclude Include="pokemon.h">
+      <Filter>src\object</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="prof phil pokedex.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ppp.ico" />
+  </ItemGroup>
+</Project>
