@@ -1,6 +1,6 @@
 {
   "name": "Prof-phils-pokedex",
   "tagline": "CPP POKEDEX",
-  "body": "# INTRO\r\nThis is PROF PHILOU'S POKEDEX VERSION 1.0 (PPP for short)\r\nPPP is a cpp enhanced pokedex made for pokemmo\r\n\r\n## FEATURES\r\nADDING POKEMONS TO PPP\r\n\r\n### FEATURES TO COME\r\nCOMPARATION AND STATS\r\n",
+  "body": "# INTRO\r\nThis is PROF PHILOU'S POKEDEX VERSION 1.0 (**PPP **for short).  \r\n**PPP **is a CPP enhanced pokedex made for pokemmo especially.  \r\n**PPP **allows you to add your pokemons to a local DB, then generates stats & stuffs about your pokemons  \r\n\r\n# IMPORTANT\r\nPlease notice that **PPP** has been made (and is being code) for pokemmo so only the first 3 generations are available.  \r\n\r\n## FEATURES\r\n- ADDING POKEMONS TO **PPP**\r\n- COMPARING POKEMON TO AVERAGE STATS OF HIS LEVEL\r\n\r\n### FEATURES TO COME\r\n- More stats & stuffs\r\n- Centralized DB\r\n-  ???\r\n\r\n### KNOWN BUGS\r\n- No bugs found yet.\r\n\r\n### OTHER\r\n- **PPP* is made with C++ 11, and for windows, although it may compile on linux, i havent test so i dunno\r\n- **PPP** uses awesomium which enables html/css/js UI\r\n- **PPP** uses [pokeapi](http://pokeapi.co/)\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
