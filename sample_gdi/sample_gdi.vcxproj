@@ -106,6 +106,31 @@
     <ClCompile Include="pokemon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\build\bin\ajouter.html" />
+    <None Include="..\build\bin\avcodec-53.dll" />
+    <None Include="..\build\bin\avformat-53.dll" />
+    <None Include="..\build\bin\avutil-51.dll" />
+    <None Include="..\build\bin\awesomium.dll" />
+    <None Include="..\build\bin\awesomium_process.exe" />
+    <None Include="..\build\bin\bin.rar" />
+    <None Include="..\build\bin\icudt.dll" />
+    <None Include="..\build\bin\index.html" />
+    <None Include="..\build\bin\jquery.js" />
+    <None Include="..\build\bin\json.js" />
+    <None Include="..\build\bin\libEGL.dll" />
+    <None Include="..\build\bin\libGLESv2.dll" />
+    <None Include="..\build\bin\main.css" />
+    <None Include="..\build\bin\main.js" />
+    <None Include="..\build\bin\pokedex.db" />
+    <None Include="..\build\bin\prof phil pokedex.exe" />
+    <None Include="..\build\bin\prof phil pokedex.ilk" />
+    <None Include="..\build\bin\prof phil pokedex.pdb" />
+    <None Include="..\build\bin\reset.css" />
+    <None Include="..\build\bin\sample_hello.pdb" />
+    <None Include="..\build\bin\sample_webflow.pdb" />
+    <None Include="..\build\bin\sample_webui.ilk" />
+    <None Include="..\build\bin\sample_webui.pdb" />
+    <None Include="..\build\bin\xinput9_1_0.dll" />
     <None Include="ajouter.html" />
     <None Include="fnord.html" />
     <None Include="index.html" />
@@ -127,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="ppp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\build\bin\awesomium.log" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

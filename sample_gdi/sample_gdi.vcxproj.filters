@@ -33,6 +33,9 @@
     <Filter Include="src\db">
       <UniqueIdentifier>{3b5eb41f-03b3-4e6d-b396-995e77724dfc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\build">
+      <UniqueIdentifier>{73b25345-2d5f-4d32-a8b9-939a63282ecb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ajouter.html">
@@ -59,6 +62,81 @@
     <None Include="reset.css">
       <Filter>src\vue\html</Filter>
     </None>
+    <None Include="..\build\bin\ajouter.html">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\avcodec-53.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\avformat-53.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\avutil-51.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\awesomium.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\awesomium_process.exe">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\bin.rar">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\icudt.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\index.html">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\jquery.js">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\json.js">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\libEGL.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\libGLESv2.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\main.css">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\main.js">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\pokedex.db">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\prof phil pokedex.exe">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\prof phil pokedex.ilk">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\prof phil pokedex.pdb">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\reset.css">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\sample_hello.pdb">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\sample_webflow.pdb">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\sample_webui.ilk">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\sample_webui.pdb">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\xinput9_1_0.dll">
+      <Filter>src\build</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nature.h">
@@ -80,5 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="ppp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\build\bin\awesomium.log">
+      <Filter>src\build</Filter>
+    </Text>
   </ItemGroup>
 </Project>
