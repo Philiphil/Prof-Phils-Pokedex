@@ -101,6 +101,7 @@
   <ItemGroup>
     <ClCompile Include="..\common\application_win.cc" />
     <ClCompile Include="..\common\view_win.cc" />
+    <ClCompile Include="comparator.cpp" />
     <ClCompile Include="db.cpp" />
     <ClCompile Include="main.cc" />
     <ClCompile Include="pokemon.cpp" />
@@ -112,7 +113,8 @@
     <None Include="..\build\bin\avutil-51.dll" />
     <None Include="..\build\bin\awesomium.dll" />
     <None Include="..\build\bin\awesomium_process.exe" />
-    <None Include="..\build\bin\bin.rar" />
+    <None Include="..\build\bin\comparaison.html" />
+    <None Include="..\build\bin\comparer.html" />
     <None Include="..\build\bin\icudt.dll" />
     <None Include="..\build\bin\index.html" />
     <None Include="..\build\bin\jquery.js" />
@@ -122,26 +124,36 @@
     <None Include="..\build\bin\main.css" />
     <None Include="..\build\bin\main.js" />
     <None Include="..\build\bin\pokedex.db" />
+    <None Include="..\build\bin\pokemon_fonction.js" />
     <None Include="..\build\bin\prof phil pokedex.exe" />
     <None Include="..\build\bin\prof phil pokedex.ilk" />
     <None Include="..\build\bin\prof phil pokedex.pdb" />
     <None Include="..\build\bin\reset.css" />
-    <None Include="..\build\bin\sample_hello.pdb" />
-    <None Include="..\build\bin\sample_webflow.pdb" />
-    <None Include="..\build\bin\sample_webui.ilk" />
-    <None Include="..\build\bin\sample_webui.pdb" />
+    <None Include="..\build\bin\texte.js" />
     <None Include="..\build\bin\xinput9_1_0.dll" />
+    <None Include="..\common\application_mac.mm" />
+    <None Include="..\common\view_mac.mm" />
     <None Include="ajouter.html" />
+    <None Include="comparaison.html" />
+    <None Include="comparer.html" />
     <None Include="fnord.html" />
     <None Include="index.html" />
     <None Include="jquery.js" />
     <None Include="json.js" />
     <None Include="main.css" />
     <None Include="main.js" />
+    <None Include="pokemon_fonction.js" />
     <None Include="reset.css" />
+    <None Include="texte.js" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\common\application.h" />
+    <ClInclude Include="..\common\js_delegate.h" />
+    <ClInclude Include="..\common\method_dispatcher.h" />
+    <ClInclude Include="..\common\view.h" />
+    <ClInclude Include="comparator.h" />
     <ClInclude Include="db.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="nature.h" />
     <ClInclude Include="pokemon.h" />
     <ClInclude Include="resource.h" />

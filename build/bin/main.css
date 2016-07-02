@@ -9,6 +9,7 @@ a, p, em, h1, h2, h3, h4, ol, ul, li, a:visited, a:hover,tr,td, span{
 	text-align: center;
 }
 h1{
+    font-family: 'Muli', sans-serif;	
 	color : #972034;
 }
 
@@ -40,9 +41,9 @@ div#textzone{
 	width: 75%;
 	margin-right: auto;
 	margin-left: auto;
-	top: 10%;
+	top: 5%;
 	position: relative;
-	height : 60%;
+	height : 65%;
 	text-shadow: 0px 0px 2px darkgrey;
 	border-top-style: solid;
 	border-left-style: solid;
@@ -50,7 +51,6 @@ div#textzone{
 	border-width: 1px;
 	box-shadow: 2px 2px 2px #000;
 	vertical-align: middle;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,6 +59,11 @@ div#textzone{
 .big{
 	font-size: 24px;
 	line-height: 50px;
+}
+
+.little{
+	font-size: 15px;
+	line-height:17px;
 }
 
 .line{

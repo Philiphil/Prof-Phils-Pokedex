@@ -4,12 +4,13 @@
 #include <Awesomium/WebCore.h>
 #include <Awesomium/STLHelpers.h>
 #include <Awesomium\DataPak.h>
-#ifdef _WIN32
-#include <Windows.h>
 #include "nature.h"
+#include "comparator.h"
 #include "type.h"
 #include "pokemon.h"
 #include "db.h"
+#ifdef _WIN32
+#include <Windows.h>
 #endif
 
 using namespace Awesomium;
@@ -61,22 +62,24 @@ class GDISample : public Application::Listener {
 		  method_dispatcher_.Bind(app_object,
 			  WSLit("exit"),
 			  JSDelegate(this, &GDISample::exit));
+
+		  method_dispatcher_.BindWithRetval(app_object,
+			  WSLit("getComparable"),
+			  JSDelegateWithRetval(this, &GDISample::getComparable));
 	  }
 	  web_view->set_js_method_handler(&method_dispatcher_);
   }
-  void popUp(WebView* caller,
-	  const JSArray& args) {
+  void popUp(WebView* caller,	  const JSArray& args) 
+  {
 	  JSValue fnord;
 	  WebString dayeum;
 	  std::string bordel;
 	  char* shiiit = new char();
-
-		  fnord = args.At(0);
-		  dayeum = fnord.ToString();
-		  dayeum.ToUTF8(shiiit, dayeum.length());
-		  bordel = shiiit;
-		  bordel = bordel.substr(0, dayeum.length());
-
+	  fnord = args.At(0);
+	  dayeum = fnord.ToString();
+	  dayeum.ToUTF8(shiiit, dayeum.length());
+	  bordel = shiiit;
+	  bordel = bordel.substr(0, dayeum.length());
 	  app_->ShowMessage(bordel.c_str());
   }
 
@@ -96,12 +99,37 @@ class GDISample : public Application::Listener {
 	  pkmn.fromString(bordel);
 	  pokemon_write(pkmn);
   }
-
+  
   void exit(WebView* caller,
 	  const JSArray& args) {
 	  app_->Quit();
   }
 
+  JSValue getComparable(WebView* caller, const JSArray& args)
+  {
+	  JSValue fnord;
+	  WebString dayeum;
+	  std::string bordel;
+	  char* shiiit = new char();
+	  fnord = args.At(0);
+	  dayeum = fnord.ToString();
+	  dayeum.ToUTF8(shiiit, dayeum.length());
+	  bordel = shiiit;
+	  bordel = bordel.substr(0, dayeum.length());
+
+	  JSArray Justiceleague = JSArray();
+	  JSValue retour;
+	  pokemon pkmn = pokemon();
+	  pkmn.fromString(bordel);
+	  std::vector<pokemon> foo = compareToOthers(pkmn);
+	  for (int i = 0; i < foo.size(); i++)
+	  {
+		  std::string tmp = foo[i].toString();
+		  Justiceleague.Push(WSLit(tmp.c_str()));
+	  }
+	  retour = Justiceleague;
+	  return retour;
+  }
   // Inherited from Application::Listener
   virtual void OnUpdate() {
   }

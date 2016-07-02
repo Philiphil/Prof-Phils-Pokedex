@@ -16,6 +16,9 @@
     <ClCompile Include="pokemon.cpp">
       <Filter>src\object</Filter>
     </ClCompile>
+    <ClCompile Include="comparator.cpp">
+      <Filter>src\stats</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -36,6 +39,15 @@
     <Filter Include="src\build">
       <UniqueIdentifier>{73b25345-2d5f-4d32-a8b9-939a63282ecb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\stats">
+      <UniqueIdentifier>{71be0ea4-4179-419a-9c4b-695852a07107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\adds">
+      <UniqueIdentifier>{81117a25-a769-4dee-b3d6-52b04d3c4cfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\vue\html\script">
+      <UniqueIdentifier>{ba9133ba-24b5-4643-976e-b42eeed8eabf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ajouter.html">
@@ -47,16 +59,7 @@
     <None Include="index.html">
       <Filter>src\vue\html</Filter>
     </None>
-    <None Include="jquery.js">
-      <Filter>src\vue\html</Filter>
-    </None>
-    <None Include="json.js">
-      <Filter>src\vue\html</Filter>
-    </None>
     <None Include="main.css">
-      <Filter>src\vue\html</Filter>
-    </None>
-    <None Include="main.js">
       <Filter>src\vue\html</Filter>
     </None>
     <None Include="reset.css">
@@ -78,9 +81,6 @@
       <Filter>src\build</Filter>
     </None>
     <None Include="..\build\bin\awesomium_process.exe">
-      <Filter>src\build</Filter>
-    </None>
-    <None Include="..\build\bin\bin.rar">
       <Filter>src\build</Filter>
     </None>
     <None Include="..\build\bin\icudt.dll">
@@ -122,19 +122,46 @@
     <None Include="..\build\bin\reset.css">
       <Filter>src\build</Filter>
     </None>
-    <None Include="..\build\bin\sample_hello.pdb">
-      <Filter>src\build</Filter>
-    </None>
-    <None Include="..\build\bin\sample_webflow.pdb">
-      <Filter>src\build</Filter>
-    </None>
-    <None Include="..\build\bin\sample_webui.ilk">
-      <Filter>src\build</Filter>
-    </None>
-    <None Include="..\build\bin\sample_webui.pdb">
-      <Filter>src\build</Filter>
-    </None>
     <None Include="..\build\bin\xinput9_1_0.dll">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="comparer.html">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="comparaison.html">
+      <Filter>src\vue\html</Filter>
+    </None>
+    <None Include="..\common\application_mac.mm">
+      <Filter>src\adds</Filter>
+    </None>
+    <None Include="..\common\view_mac.mm">
+      <Filter>src\adds</Filter>
+    </None>
+    <None Include="json.js">
+      <Filter>src\vue\html\script</Filter>
+    </None>
+    <None Include="jquery.js">
+      <Filter>src\vue\html\script</Filter>
+    </None>
+    <None Include="main.js">
+      <Filter>src\vue\html\script</Filter>
+    </None>
+    <None Include="texte.js">
+      <Filter>src\vue\html\script</Filter>
+    </None>
+    <None Include="pokemon_fonction.js">
+      <Filter>src\vue\html\script</Filter>
+    </None>
+    <None Include="..\build\bin\comparaison.html">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\comparer.html">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\pokemon_fonction.js">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\texte.js">
       <Filter>src\build</Filter>
     </None>
   </ItemGroup>
@@ -152,6 +179,24 @@
       <Filter>src\object</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="comparator.h">
+      <Filter>src\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>src\adds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\application.h">
+      <Filter>src\adds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\js_delegate.h">
+      <Filter>src\adds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\method_dispatcher.h">
+      <Filter>src\adds</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\view.h">
+      <Filter>src\adds</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="prof phil pokedex.rc" />

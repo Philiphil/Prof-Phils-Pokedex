@@ -168,3 +168,8 @@ void pokemon::fromString(string fnord)
 	foo.erase(0, found + 1);
 	this->nature1 = static_cast<nature>(stoi(foo));
 }
+
+int pokemon::getGrodex()
+{
+	return this->pv + this->atk + this->def + this->ats + this->des + this->spd;
+}
