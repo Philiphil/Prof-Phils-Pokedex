@@ -1,0 +1,84 @@
+﻿<link rel="stylesheet" href="resit.css" />
+<link rel="stylesheet" href="main.css" />
+<script type="text/javaScript" src="json.js"></script>
+<script type="text/javaScript" src="jquery.js"></script>
+<script type="text/javaScript" src="main.js"></script>
+<meta charset="utf-8" />
+
+<div id="container">
+    <div id="header">
+        <h1>
+            <script>document.write(get_texte("ppp"));</script>
+        </h1>
+    </div>
+    <div id="textzone">
+        <div id="ajax"><br><br><br><br></div>
+        <div id="ajouter_1">
+            <input type="text" name="id" id="pkmn_id" placeholder="n° in National Pokedex" onblur="check_id()" />
+            <br>
+            <input type="text" name="level" placeholder="level" />
+            <br>
+            <input type="text" name="pv" placeholder="pv" />
+            <br>
+            <input type="text" name="atk" placeholder="atk" />
+            <br>
+            <input type="text" name="def" placeholder="def" />
+            <br>
+            <input type="text" name="ats" placeholder="atk spe" />
+            <br>
+            <input type="text" name="des" placeholder="def spe" />
+            <br>
+            <input type="text" name="spd" placeholder="spd" />
+            <br>
+            <input type="button" value="ok" onClick="ok(1)" />
+        </div>
+        <div id="ajouter_2" class="invisible">
+            <p>
+                <script>document.write(get_texte("add_skip"));</script>
+            </p>
+            <input type="text" name="ivpv" placeholder="iv pv" />
+            <br>
+            <input type="text" name="ivatk" placeholder="iv atk" />
+            <br>
+            <input type="text" name="ivdef" placeholder="iv def" />
+            <br>
+            <input type="text" name="ivats" placeholder="iv atk spe" />
+            <br>
+            <input type="text" name="ivdes" placeholder="iv def spe" />
+            <br>
+            <input type="text" name="ivspd" placeholder="iv spd" />
+            <br>
+            <input type="button" value="ok" onClick="ok(2)" />
+        </div>
+        <div id="ajouter_3" class="invisible">
+            <p>
+                <script>document.write(get_texte("add_skip"));</script>
+            </p>
+            <input type="text" name="evpv" placeholder="ev pv" />
+            <br>
+            <input type="text" name="evatk" placeholder="ev atk" />
+            <br>
+            <input type="text" name="evdef" placeholder="ev def" />
+            <br>
+            <input type="text" name="evats" placeholder="ev atk spe" />
+            <br>
+            <input type="text" name="evdes" placeholder="ev def spe" />
+            <br>
+            <input type="text" name="evspd" placeholder="ev spd" />
+            <br>
+            <input type="button" value="ok" onClick="ok(3)" />
+        </div>
+        <div id="ajouter_4" class="invisible">
+            <p>
+                <script>document.write(get_texte("add_skip"));</script>
+            </p>
+                <br>
+                <input type='text' name="nature" placeholder="Nature in english">
+                <br>
+                <input type="button" value="ok" onClick="ok(4)" />
+</div>
+    </div>
+
+
+
+</div>

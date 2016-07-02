@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+a, p, em, h1, h2, h3, h4, ol, ul, li, a:visited, a:hover,tr,td, span{
+	font-family: 'Open Sans', sans-serif;	
+	color: #151515; 
+	text-decoration: none;
+
+	text-align: center;
+}
+h1{
+	color : #972034;
+}
+
+
+div#container{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-color: #dc0a2d;
+}
+
+ul li{
+list-style-position: inside;
+list-style-type : none;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	color : blue;
+	text-shadow: 2px 2px 2px lightblue;
+}
+
+div#textzone{
+	background-color: #dedede;
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	top: 10%;
+	position: relative;
+	height : 60%;
+	text-shadow: 0px 0px 2px darkgrey;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-color: black;
+	border-width: 1px;
+	box-shadow: 2px 2px 2px #000;
+	vertical-align: middle;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big{
+	font-size: 24px;
+	line-height: 50px;
+}
+
+.line{
+	display: block;
+	width: 100%;
+}
+
+.invisible{
+   display : none;
+}
