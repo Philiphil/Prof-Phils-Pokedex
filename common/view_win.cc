@@ -8,7 +8,7 @@ class ViewWin;
 static bool g_is_initialized = false;
 static std::vector<ViewWin*> g_active_views_;
 const wchar_t szWindowClass[] = L"ViewWinClass";
-const wchar_t szTitle[] = L"Prof Phil's Pokedex";
+const wchar_t szTitle[] = L"Prof Philou's Pokedex";
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 using namespace Awesomium;

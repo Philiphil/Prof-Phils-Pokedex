@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FA4E821F-F613-4986-9046-38BB9FECB960}</ProjectGuid>
     <RootNamespace>sample_gdi</RootNamespace>
-    <ProjectName>prof phil pokedex</ProjectName>
+    <ProjectName>prof philou's pokedex</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">

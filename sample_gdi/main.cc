@@ -40,7 +40,6 @@ class GDISample : public Application::Listener {
   // Inherited from Application::Listener
   virtual void OnLoaded() {
     view_ = View::Create(500, 600);
-
 	BindMethods(view_->web_view());
     view_->web_view()->LoadURL(WebURL(WSLit("file:///loadingscreen.html")));
   }
@@ -144,10 +143,10 @@ class GDISample : public Application::Listener {
 int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, wchar_t*, 
   int nCmdShow) {
 
- dbinit();
 
   GDISample sample;
   sample.Run();
+  dbinit();
 
   return 0;
 }
