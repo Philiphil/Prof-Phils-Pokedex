@@ -164,6 +164,9 @@
     <None Include="..\build\bin\texte.js">
       <Filter>src\build</Filter>
     </None>
+    <None Include="pokedex.db">
+      <Filter>src\adds</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nature.h">

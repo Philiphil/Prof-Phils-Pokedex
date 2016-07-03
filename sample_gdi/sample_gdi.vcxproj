@@ -142,6 +142,7 @@
     <None Include="json.js" />
     <None Include="main.css" />
     <None Include="main.js" />
+    <None Include="pokedex.db" />
     <None Include="pokemon_fonction.js" />
     <None Include="reset.css" />
     <None Include="texte.js" />

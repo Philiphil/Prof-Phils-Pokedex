@@ -190,15 +190,17 @@ function ok(etape)
         pokemon.type2 = pokemon_typeToInt(pokemon.type2);
         pokemon.nature = pokemon_natureToInt(pokemon.nature);
         var result = App.getComparable(pokemon_toString(pokemon));
-        $("#ajouter_4").html("");
+        $("#ajouter_4").addClass("invisible");
+        $("#ajouter_5").removeClass("invisible");
         if (result.length == 0 || (result.lenght == 1 && result[0] ==""))
         {
-            $("#ajouter_4").html($("#ajouter_4").html() + "<a href='index.html'><input type='button' value='" + get_texte("return") + "'></a>");
-            $("#ajouter_4").html($("#ajouter_4").html() + '<p>'+get_texte("error_stats")+'</p>');          
+            $("#ajouter_5").html("");
+            $("#ajouter_5").html($("#ajouter_5").html() + "<a href='index.html'><input type='button' value='" + get_texte("return") + "'></a>");
+            $("#ajouter_5").html($("#ajouter_5").html() + '<p>'+get_texte("error_stats")+'</p>');          
             return;
         }
         
-
+        
         var _tmp = "";
         var pkmns = [];
         var _ctr = 0;
@@ -217,9 +219,8 @@ function ok(etape)
         _moy =Math.ceil( _moy / pkmns.length);
         _moy = pokemon_getGrodex(pokemon) - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html()+"<p>"+get_texte("compare_tomoy")+" "+ _tmp + _moy + "</p>");
+        $("#compare_tomoy").html(_tmp + _moy);
         
-
         _moy = 0;
         pkmns.forEach(function (foo) {
             _moy += foo.pv
@@ -227,7 +228,7 @@ function ok(etape)
         _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon.pv - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html() + "<p>" + get_texte("comparepv_tomoy") + " " + _tmp + _moy + "</p>");
+        $("#comparepv_tomoy").html(_tmp + _moy);
 
         _moy = 0;
         pkmns.forEach(function (foo) {
@@ -236,7 +237,7 @@ function ok(etape)
         _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon.atk - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html() + "<p>" + get_texte("compareatk_tomoy") + " " + _tmp + _moy + "</p>");
+        $("#compareatk_tomoy").html(_tmp + _moy);
 
         _moy = 0;
         pkmns.forEach(function (foo) {
@@ -245,7 +246,7 @@ function ok(etape)
         _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon.def - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html() + "<p>" + get_texte("comparedef_tomoy") + " " + _tmp + _moy + "</p>");
+        $("#comparedef_tomoy").html(_tmp + _moy);
 
         _moy = 0;
         pkmns.forEach(function (foo) {
@@ -254,7 +255,7 @@ function ok(etape)
         _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon.ats - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html() + "<p>" + get_texte("compareats_tomoy") + " " + _tmp + _moy + "</p>");
+        $("#compareats_tomoy").html(_tmp + _moy);
 
         _moy = 0;
         pkmns.forEach(function (foo) {
@@ -263,7 +264,7 @@ function ok(etape)
         _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon.des - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html() + "<p>" + get_texte("comparedes_tomoy") + " " + _tmp + _moy + "</p>");
+        $("#comparedes_tomoy").html(_tmp + _moy);
 
         _moy = 0;
         pkmns.forEach(function (foo) {
@@ -272,12 +273,9 @@ function ok(etape)
         _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon.spd - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html($("#ajouter_4").html() + "<p>" + get_texte("comparespd_tomoy") + " " + _tmp + _moy + "</p>");
-
-        $("#ajouter_4").addClass("little");
-
-        $("#ajouter_4").html($("#ajouter_4").html() +"<a href='index.html'><input type='button' value='"+get_texte("return")+"'></a>");
-
+        $("#comparespd_tomoy").html(_tmp + _moy);
+        
+        $("#ajouter_5").addClass("little");        
     }
 }
 

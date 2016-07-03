@@ -10,7 +10,7 @@ a, p, em, h1, h2, h3, h4, ol, ul, li, a:visited, a:hover,tr,td, span{
 }
 h1{
     font-family: 'Muli', sans-serif;	
-	color : #972034;
+	color : #990c24;
 }
 
 
@@ -73,4 +73,28 @@ div#textzone{
 
 .invisible{
    display : none;
+}
+
+
+div.footer{
+    font-family: 'Muli', sans-serif;	
+
+    font-size: 20px;
+    position : fixed;
+    text-align : center;
+    width : 100%;
+    bottom:2px;
+}
+
+
+div.footer span{
+    	color : #990c24;
+}
+
+.footer_ver{
+font-size:18px;
+}
+.footer_ver{
+    font-size : 13px;
+    vertical-align :super;
 }

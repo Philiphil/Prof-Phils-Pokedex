@@ -180,27 +180,36 @@ function pokemon_natureToInt(nature)
 
 function pokemon_toString(pkmn)
 {
-    return pokemon.id + "-" +
-            pokemon.level + "-" +
-            pokemon.pv + "-" +
-            pokemon.atk + "-" +
-            pokemon.def + "-" +
-            pokemon.ats + "-" +
-            pokemon.des + "-" +
-            pokemon.spd + "-" +
-            pokemon.ivpv + "-" +
-            pokemon.ivatk + "-" +
-            pokemon.ivdef + "-" +
-            pokemon.ivats + "-" +
-            pokemon.ivdes + "-" +
-            pokemon.ivspd + "-" +
-            pokemon.evpv + "-" +
-            pokemon.evatk + "-" +
-            pokemon.evdef + "-" +
-            pokemon.evats + "-" +
-            pokemon.evdes + "-" +
-            pokemon.evspd + "-" +
-            pokemon.type1 + "-" +
-            pokemon.type2 + "-" +
-            pokemon.nature;
+    return pkmn.id + "-" +
+            pkmn.level + "-" +
+            pkmn.pv + "-" +
+            pkmn.atk + "-" +
+            pkmn.def + "-" +
+            pkmn.ats + "-" +
+            pkmn.des + "-" +
+            pkmn.spd + "-" +
+            pkmn.ivpv + "-" +
+            pkmn.ivatk + "-" +
+            pkmn.ivdef + "-" +
+            pkmn.ivats + "-" +
+            pkmn.ivdes + "-" +
+            pkmn.ivspd + "-" +
+            pkmn.evpv + "-" +
+            pkmn.evatk + "-" +
+            pkmn.evdef + "-" +
+            pkmn.evats + "-" +
+            pkmn.evdes + "-" +
+            pkmn.evspd + "-" +
+            pkmn.type1 + "-" +
+            pkmn.type2 + "-" +
+            pkmn.nature;
+}
+
+function pokemon_hasIvs(pkmn)
+{
+    return (pkmn.ivatk + pkmn.ivdef + pkmn.ivpv + pkmn.ivats + pkmn.ivdes + pkmn.ivspd) > 0;
+}
+
+function pokemon_hasEvs(pkmn) {
+    return (pkmn.evatk + pkmn.evdef + pkmn.evpv + pkmn.evats + pkmn.evdes + pkmn.evspd) > 0;
 }
