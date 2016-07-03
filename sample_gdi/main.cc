@@ -122,10 +122,13 @@ class GDISample : public Application::Listener {
 	  pokemon pkmn = pokemon();
 	  pkmn.fromString(bordel);
 	  std::vector<pokemon> foo = compareToOthers(pkmn);
-	  for (int i = 0; i < foo.size(); i++)
+	  if (foo.size() > 0)
 	  {
-		  std::string tmp = foo[i].toString();
-		  Justiceleague.Push(WSLit(tmp.c_str()));
+		  for (int i = 0; i < foo.size(); i++)
+		  {
+			  std::string tmp = foo[i].toString();
+			  Justiceleague.Push(WSLit(tmp.c_str()));
+		  }
 	  }
 	  retour = Justiceleague;
 	  return retour;

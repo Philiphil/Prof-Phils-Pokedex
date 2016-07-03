@@ -190,23 +190,24 @@ function ok(etape)
         pokemon.type2 = pokemon_typeToInt(pokemon.type2);
         pokemon.nature = pokemon_natureToInt(pokemon.nature);
         var result = App.getComparable(pokemon_toString(pokemon));
-
-        if (result.length == 0)
+        $("#ajouter_4").html("");
+        if (result.length == 0 || (result.lenght == 1 && result[0] ==""))
         {
             $("#ajouter_4").html($("#ajouter_4").html() + "<a href='index.html'><input type='button' value='" + get_texte("return") + "'></a>");
-
-            $("#error_stats").removeClass("invisible");
+            $("#ajouter_4").html($("#ajouter_4").html() + '<p>'+get_texte("error_stats")+'</p>');          
             return;
         }
-
+        
 
         var _tmp = "";
         var pkmns = [];
         var _ctr = 0;
 
         result.forEach(function (foo) {
-            pkmns[_ctr] = pokemonFromString(foo);
-            _ctr++;
+            if (foo != "") {
+                pkmns[_ctr] = pokemonFromString(foo);
+                _ctr++;
+            }
         });
         _ctr = 0;
         var _moy = 0;
@@ -214,10 +215,8 @@ function ok(etape)
             _moy += parseInt(pokemon_getGrodex(foo));
         });
         _moy =Math.ceil( _moy / pkmns.length);
-        $("#ajouter_4").html();
         _moy = pokemon_getGrodex(pokemon) - _moy;
         _tmp = _moy > 0 ? "+" : "";
-        $("#ajouter_4").html("");
         $("#ajouter_4").html($("#ajouter_4").html()+"<p>"+get_texte("compare_tomoy")+" "+ _tmp + _moy + "</p>");
         
 
