@@ -1,7 +1,6 @@
 function get_texte(string) {
     var prefixe = "en";
     var array = [];
-
     array['fr'] = [];
     array['en'] = [];
     array['en']['ppp'] = "Prof Philou's Pokedex";
@@ -21,7 +20,7 @@ function get_texte(string) {
     array['en']['comparespd_tomoy'] = "SPD compared to average :";
     array['en']['comparer_pokemon'] = "Get Pokemon Stats";
     array['en']['getnormalstats'] = "Get moy Stats";
-    array['en']["hardy"] = "hardy"; 
+    array['en']["hardy"] = "hardy";
     array['en']["lonely"] = "lonely";
     array['en']["brave"] = "brave";
     array['en']["adamant"] = "adamant";
@@ -49,5 +48,9 @@ function get_texte(string) {
     array['en']["error_iv"] = "MAX IV PER STAT : 255; MAX IVS 510";
     array['en']["error_ev"] = "MAX EV PER STAT : 31; MAX EVS 186";
     array['en']["error_stats"] = "NOT ENOUGHT DATA TO COMPARE";
+    array['en']["zigurat_iv"] = "This pokemon needs more IVs :";
+    array['en']["zigurat_ev"] = "This pokemon needs more EVs :";
+    array['en']["zigurat_tt"] = "EVS & IVS IMPACT IN YOUR POKEMON :";
+
     return array[prefixe][string];
 }

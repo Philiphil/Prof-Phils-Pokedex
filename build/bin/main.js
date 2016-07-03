@@ -277,5 +277,47 @@ function ok(etape)
         
         $("#ajouter_5").addClass("little");        
     }
+    if (etape == 6) {
+        $("#ajouter_5").addClass("invisible");
+        $("#ajouter_6").removeClass("invisible");
+
+/*
+        var lld = pokemon.evpv + pokemon.evatk + pokemon.evdef + pokemon.evats + pokemon.evdes + pokemon.evspd + pokemon.ivpv + pokemon.ivatk + pokemon.ivdef + pokemon.ivats + pokemon.ivdes + pokemon.ivspd;
+        if (lld > 0) {
+            var ttl_c = (510 + 186) - lld;
+            if (ttl_c > 0) {
+                var cent = ceil((ttl_c * 100) / parseInt((pokemon_getGrodex(pokemon)) + lld));
+                $("#more_tts").removeClass("invisible");
+                $("#more_tt").html(cent + "%");
+            }
+        }
+
+        */
+
+
+        var ivs = pokemon.ivpv + pokemon.ivatk + pokemon.ivdef + pokemon.ivats + pokemon.ivdes + pokemon.ivspd;
+        if(ivs > 0)
+        {
+            var ivs_c = 510 - ivs;
+            if (ivs_c > 0)
+            {
+                $("#more_ivs").removeClass("invisible");
+                $("#more_iv").html(ivs_c);
+            }
+
+        }
+        var evs = pokemon.evpv + pokemon.evatk + pokemon.evdef + pokemon.evats + pokemon.evdes + pokemon.evspd;
+        if (evs > 0) {
+            var evs_c = 186 - evs;
+            if (evs_c > 0) {
+                $("#more_evs").removeClass("invisible");
+                $("#more_ev").html(evs_c);
+            }
+
+        }
+
+
+
+    }
 }
 

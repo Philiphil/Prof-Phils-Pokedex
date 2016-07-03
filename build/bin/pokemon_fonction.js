@@ -20,7 +20,7 @@ function pokemonFromString(string) {
     pkmn.evdef = parseInt(foo[16]);
     pkmn.evats = parseInt(foo[17]);
     pkmn.evdes = parseInt(foo[18]);
-    pkmn.evspd = parseInt(foo[19]); 
+    pkmn.evspd = parseInt(foo[19]);
     pkmn.type1 = parseInt(foo[20]);
     pkmn.type2 = parseInt(foo[21]);
     pkmn.nature = parseInt(foo[22]);
@@ -178,7 +178,8 @@ function pokemon_natureToInt(nature)
     }
 }
 
-function pokemon_toString(pkmn) {
+function pokemon_toString(pkmn)
+{
     return pkmn.id + "-" +
             pkmn.level + "-" +
             pkmn.pv + "-" +
@@ -204,7 +205,8 @@ function pokemon_toString(pkmn) {
             pkmn.nature;
 }
 
-function pokemon_hasIvs(pkmn) {
+function pokemon_hasIvs(pkmn)
+{
     return (pkmn.ivatk + pkmn.ivdef + pkmn.ivpv + pkmn.ivats + pkmn.ivdes + pkmn.ivspd) > 0;
 }
 
