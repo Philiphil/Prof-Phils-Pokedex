@@ -140,6 +140,7 @@
     <None Include="index.html" />
     <None Include="jquery.js" />
     <None Include="json.js" />
+    <None Include="loadingscreen.html" />
     <None Include="main.css" />
     <None Include="main.js" />
     <None Include="pokedex.db" />

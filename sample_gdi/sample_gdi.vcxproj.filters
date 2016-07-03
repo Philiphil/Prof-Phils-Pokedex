@@ -167,6 +167,9 @@
     <None Include="pokedex.db">
       <Filter>src\adds</Filter>
     </None>
+    <None Include="loadingscreen.html">
+      <Filter>src\vue\html</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nature.h">

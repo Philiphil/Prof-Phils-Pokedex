@@ -42,8 +42,7 @@ class GDISample : public Application::Listener {
     view_ = View::Create(500, 600);
 
 	BindMethods(view_->web_view());
-	Sleep(500);
-    view_->web_view()->LoadURL(WebURL(WSLit("file:///index.html")));
+    view_->web_view()->LoadURL(WebURL(WSLit("file:///loadingscreen.html")));
   }
 
 
