@@ -16,7 +16,7 @@ COMPARING POKEMON TO AVERAGE STATS OF HIS LEVEL
     
 **DOWNLOAD**  
 
-windows : 
+windows :  
 Clone PPP  
 Unzip PPP/BUILD/BIN/ somewhere and run PPP.exe  
 
