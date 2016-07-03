@@ -126,9 +126,9 @@
     <None Include="..\build\bin\main.js" />
     <None Include="..\build\bin\pokedex.db" />
     <None Include="..\build\bin\pokemon_fonction.js" />
-    <None Include="..\build\bin\prof phil pokedex.exe" />
-    <None Include="..\build\bin\prof phil pokedex.ilk" />
-    <None Include="..\build\bin\prof phil pokedex.pdb" />
+    <None Include="..\build\bin\prof philou%27s pokedex.exe" />
+    <None Include="..\build\bin\prof philou%27s pokedex.ilk" />
+    <None Include="..\build\bin\prof philou%27s pokedex.pdb" />
     <None Include="..\build\bin\reset.css" />
     <None Include="..\build\bin\texte.js" />
     <None Include="..\build\bin\xinput9_1_0.dll" />

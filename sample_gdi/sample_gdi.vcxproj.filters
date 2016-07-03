@@ -110,15 +110,6 @@
     <None Include="..\build\bin\pokedex.db">
       <Filter>src\build</Filter>
     </None>
-    <None Include="..\build\bin\prof phil pokedex.exe">
-      <Filter>src\build</Filter>
-    </None>
-    <None Include="..\build\bin\prof phil pokedex.ilk">
-      <Filter>src\build</Filter>
-    </None>
-    <None Include="..\build\bin\prof phil pokedex.pdb">
-      <Filter>src\build</Filter>
-    </None>
     <None Include="..\build\bin\reset.css">
       <Filter>src\build</Filter>
     </None>
@@ -171,6 +162,15 @@
       <Filter>src\vue\html</Filter>
     </None>
     <None Include="..\build\bin\loadingscreen.html">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\prof philou%27s pokedex.ilk">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\prof philou%27s pokedex.exe">
+      <Filter>src\build</Filter>
+    </None>
+    <None Include="..\build\bin\prof philou%27s pokedex.pdb">
       <Filter>src\build</Filter>
     </None>
   </ItemGroup>

@@ -11,7 +11,6 @@ function get_texte(string) {
     array['en']['return'] = "Return";
     array['en']['add_skip'] = "You can skip this";
     array['en']['comparer_mypkemon'] = "Compare my pokemon";
-    //comparepv_tomoy
     array['en']['compare_tomoy'] = "Pokemon stats compared to average :";
     array['en']['comparepv_tomoy'] = "PV compared to average :";
     array['en']['compareatk_tomoy'] = "ATK compared to average :";
@@ -19,7 +18,6 @@ function get_texte(string) {
     array['en']['compareats_tomoy'] = "ATK SPE compared to average :";
     array['en']['comparedes_tomoy'] = "DEF SPE compared to average :";
     array['en']['comparespd_tomoy'] = "SPD compared to average :";
-
     array['en']['comparer_pokemon'] = "Get Pokemon Stats";
     array['en']['getnormalstats'] = "Get moy Stats";
     array['en']["hardy"] = "hardy";
@@ -47,13 +45,12 @@ function get_texte(string) {
     array['en']["sassy"] = "sassy";
     array['en']["careful"] = "careful";
     array['en']["quirky"] = "quirky";
-
     array['en']["error_iv"] = "MAX IV PER STAT : 255; MAX IVS 510";
     array['en']["error_ev"] = "MAX EV PER STAT : 31; MAX EVS 186";
     array['en']["error_stats"] = "NOT ENOUGHT DATA TO COMPARE";
-
-
-
+    array['en']["zigurat_iv"] = "This pokemon needs more IVs :";
+    array['en']["zigurat_ev"] = "This pokemon needs more EVs :";
+    array['en']["zigurat_tt"] = "EVS & IVS IMPACT IN YOUR POKEMON :";
 
     return array[prefixe][string];
 }
