@@ -44,7 +44,7 @@
         </svg>
 
         <p>LOADING</p>
- 
+
 
 
     </div>
@@ -64,7 +64,11 @@
 <script type="text/javaScript" src="main.js"></script>
 <script type="text/javaScript" src="jquery.js"></script>
 <script>
-            $(document).ready(function () {
-                document.location.href = "index.html"
-            });
+    $(document).ready(function () {
+        if (App.init())
+        {
+            document.location.href = "index.html"
+        }
+
+         });
 </script>

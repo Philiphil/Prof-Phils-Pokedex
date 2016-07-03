@@ -64,6 +64,10 @@ class GDISample : public Application::Listener {
 		  method_dispatcher_.BindWithRetval(app_object,
 			  WSLit("getComparable"),
 			  JSDelegateWithRetval(this, &GDISample::getComparable));
+
+		  method_dispatcher_.BindWithRetval(app_object,
+			  WSLit("init"),
+			  JSDelegateWithRetval(this, &GDISample::init));
 	  }
 	  web_view->set_js_method_handler(&method_dispatcher_);
   }
@@ -131,6 +135,15 @@ class GDISample : public Application::Listener {
 	  retour = Justiceleague;
 	  return retour;
   }
+
+  JSValue init(WebView* caller, const JSArray& args)
+  {
+	  dbinit();
+
+	  
+	  JSValue retour= JSValue(1);
+	  return retour;
+  }
   // Inherited from Application::Listener
   virtual void OnUpdate() {
   }
@@ -146,7 +159,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE, wchar_t*,
 
   GDISample sample;
   sample.Run();
-  dbinit();
+ 
 
   return 0;
 }
