@@ -121,6 +121,7 @@
     <None Include="..\build\bin\json.js" />
     <None Include="..\build\bin\libEGL.dll" />
     <None Include="..\build\bin\libGLESv2.dll" />
+    <None Include="..\build\bin\loadingscreen.html" />
     <None Include="..\build\bin\main.css" />
     <None Include="..\build\bin\main.js" />
     <None Include="..\build\bin\pokedex.db" />

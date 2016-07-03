@@ -170,6 +170,9 @@
     <None Include="loadingscreen.html">
       <Filter>src\vue\html</Filter>
     </None>
+    <None Include="..\build\bin\loadingscreen.html">
+      <Filter>src\build</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="nature.h">
