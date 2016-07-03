@@ -1,5 +1,7 @@
 **CPP POKEDEX  
-Please see https://philiphil.github.io/Prof-Phils-Pokedex/**
+Please see https://philiphil.github.io/Prof-Phils-Pokedex/
+This page is not very uptodate
+**
 
 **INTRO**
 
