@@ -14,9 +14,6 @@ function check_id()
 	pokemon.type1 = arr[0];
 	pokemon.type2 = arr[1];
 
-	App.popUp(pokemon.type1+" "+pokemon.type2);
-
-
 	    var img = document.createElement("img");
 	    img.src = y+".png";
 	    var tmipt = document.getElementById("ajax");

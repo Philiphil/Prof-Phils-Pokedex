@@ -1,32 +1,26 @@
 var pokemon = {};
 
-function check_id()
-{
-	var x = document.getElementById("pkmn_id");
-	var y = parseInt(x.value);
-	if (y < 0 || y > 386 || x.value == "")
-	{
-	    App.popUp(get_texte("wrong_id"));
-	    return;
-	}
-	pokemon.id = y;
-	var arr = App.getTypes(y);
-	pokemon.type1 = arr[0];
-	pokemon.type2 = arr[1];
+function check_id() {
+    var x = document.getElementById("pkmn_id");
+    var y = parseInt(x.value);
+    if (y < 0 || y > 386 || x.value == "") {
+        App.popUp(get_texte("wrong_id"));
+        return;
+    }
+    pokemon.id = y;
+    var arr = App.getTypes(y);
+    pokemon.type1 = arr[0];
+    pokemon.type2 = arr[1];
 
-	App.popUp(pokemon.type1+" "+pokemon.type2);
-
-
-	    var img = document.createElement("img");
-	    img.src = y+".png";
-	    var tmipt = document.getElementById("ajax");
-	    tmipt.innerHTML = "";
-	    tmipt.appendChild(img);
+    var img = document.createElement("img");
+    img.src = y + ".png";
+    var tmipt = document.getElementById("ajax");
+    tmipt.innerHTML = "";
+    tmipt.appendChild(img);
 
 }
 
-function ok(etape)
-{
+function ok(etape) {
     if (etape == 1) {
         var id = parseInt($("input:text[name=id]").val());
         var pv = parseInt($("input:text[name=pv]").val());
@@ -40,7 +34,7 @@ function ok(etape)
             $("input:text[name=id]").css('background-color', 'red');
             return;
         }
-        if (!level || level < 0 ||level > 100) {
+        if (!level || level < 0 || level > 100) {
             $("input:text[name=level]").css('background-color', 'red');
             return;
         }
@@ -87,13 +81,12 @@ function ok(etape)
         var ivspd = parseInt($("input:text[name=ivspd]").val());
         var optionnel = ivpv + ivatk + ivdef + ivats + ivdes + ivspd;
         pokemon.ivpv = optionnel > 0 ? ivpv : 0;
-        pokemon.ivatk = optionnel> 0 ? ivatk : 0;
-        pokemon.ivdef = optionnel> 0 ? ivdef : 0;
-        pokemon.ivats = optionnel> 0 ? ivats : 0;
-        pokemon.ivdes = optionnel> 0 ? ivdes : 0;
+        pokemon.ivatk = optionnel > 0 ? ivatk : 0;
+        pokemon.ivdef = optionnel > 0 ? ivdef : 0;
+        pokemon.ivats = optionnel > 0 ? ivats : 0;
+        pokemon.ivdes = optionnel > 0 ? ivdes : 0;
         pokemon.ivspd = optionnel > 0 ? ivspd : 0;
-        if (ivpv < 0 || ivpv > 255)
-        {
+        if (ivpv < 0 || ivpv > 255) {
             $("input:text[name=ivpv]").css('background-color', 'red');
             return;
         }
@@ -117,8 +110,7 @@ function ok(etape)
             $("input:text[name=ivspd]").css('background-color', 'red');
             return;
         }
-        if (optionnel > 510)
-        {
+        if (optionnel > 510) {
             $("#error_iv").removeClass("invisible");
             return;
         }
@@ -178,7 +170,7 @@ function ok(etape)
         pokemon.nature = nature != "" ? nature : 0;
         pokemon.nature = pokemon_natureToInt(pokemon.nature);
         App.addPokemon(pokemon_toString(pokemon));
-         document.location.href = "index.html"
+        document.location.href = "index.html"
 
     }
     if (etape == 5) {
@@ -188,15 +180,14 @@ function ok(etape)
         var result = App.getComparable(pokemon_toString(pokemon));
         $("#ajouter_4").addClass("invisible");
         $("#ajouter_5").removeClass("invisible");
-        if (result.length == 0 || (result.lenght == 1 && result[0] ==""))
-        {
+        if (result.length == 0 || (result.lenght == 1 && result[0] == "")) {
             $("#ajouter_5").html("");
             $("#ajouter_5").html($("#ajouter_5").html() + "<a href='index.html'><input type='button' value='" + get_texte("return") + "'></a>");
-            $("#ajouter_5").html($("#ajouter_5").html() + '<p>'+get_texte("error_stats")+'</p>');          
+            $("#ajouter_5").html($("#ajouter_5").html() + '<p>' + get_texte("error_stats") + '</p>');
             return;
         }
-        
-        
+
+
         var _tmp = "";
         var pkmns = [];
         var _ctr = 0;
@@ -212,11 +203,11 @@ function ok(etape)
         pkmns.forEach(function (foo) {
             _moy += parseInt(pokemon_getGrodex(foo));
         });
-        _moy =Math.ceil( _moy / pkmns.length);
+        _moy = Math.ceil(_moy / pkmns.length);
         _moy = pokemon_getGrodex(pokemon) - _moy;
         _tmp = _moy > 0 ? "+" : "";
         $("#compare_tomoy").html(_tmp + _moy);
-        
+
         _moy = 0;
         pkmns.forEach(function (foo) {
             _moy += foo.pv
@@ -270,8 +261,8 @@ function ok(etape)
         _moy = pokemon.spd - _moy;
         _tmp = _moy > 0 ? "+" : "";
         $("#comparespd_tomoy").html(_tmp + _moy);
-        
-        $("#ajouter_5").addClass("little");        
+
+        $("#ajouter_5").addClass("little");
     }
     if (etape == 6) {
         $("#ajouter_5").addClass("invisible");
@@ -322,7 +313,6 @@ function ok(etape)
     }
 }
 
-function redirect()
-{
+function redirect() {
     document.location.href = "index.html";
 }
