@@ -10,19 +10,19 @@ function check_id()
 	    return;
 	}
 	pokemon.id = y;
-	$.get("http://pokeapi.co/api/v2/pokemon/" + y+"/", function (data, status) {
-	    pokemon.type1 = data.types[0]["type"].name;
-	    pokemon.type2 = data.types.length > 1  ? data.types[1]["type"].name : 0;
+	var arr = App.getTypes(y);
+	pokemon.type1 = arr[0];
+	pokemon.type2 = arr[1];
 
-	});
-	$.get("http://pokeapi.co/api/v2/pokemon-form/" + y + "/", function (data, status) {
-	    var tmp = data.sprites["front_default"];
+	App.popUp(pokemon.type1+" "+pokemon.type2);
+
+
 	    var img = document.createElement("img");
-	    img.src = tmp;
+	    img.src = y+".png";
 	    var tmipt = document.getElementById("ajax");
 	    tmipt.innerHTML = "";
 	    tmipt.appendChild(img);
-	});
+
 }
 
 function ok(etape)
@@ -176,8 +176,6 @@ function ok(etape)
     if (etape == 4) {
         var nature = $("input:text[name=nature]").val();
         pokemon.nature = nature != "" ? nature : 0;
-        pokemon.type1 = pokemon_typeToInt(pokemon.type1);
-        pokemon.type2 = pokemon_typeToInt(pokemon.type2);
         pokemon.nature = pokemon_natureToInt(pokemon.nature);
         App.addPokemon(pokemon_toString(pokemon));
          document.location.href = "index.html"
@@ -186,8 +184,6 @@ function ok(etape)
     if (etape == 5) {
         var nature = $("input:text[name=nature]").val();
         pokemon.nature = nature != "" ? nature : 0;
-        pokemon.type1 = pokemon_typeToInt(pokemon.type1);
-        pokemon.type2 = pokemon_typeToInt(pokemon.type2);
         pokemon.nature = pokemon_natureToInt(pokemon.nature);
         var result = App.getComparable(pokemon_toString(pokemon));
         $("#ajouter_4").addClass("invisible");
@@ -281,26 +277,28 @@ function ok(etape)
         $("#ajouter_5").addClass("invisible");
         $("#ajouter_6").removeClass("invisible");
 
-/*
+
         var lld = pokemon.evpv + pokemon.evatk + pokemon.evdef + pokemon.evats + pokemon.evdes + pokemon.evspd + pokemon.ivpv + pokemon.ivatk + pokemon.ivdef + pokemon.ivats + pokemon.ivdes + pokemon.ivspd;
-        if (lld > 0) {
-            var ttl_c = (510 + 186) - lld;
-            if (ttl_c > 0) {
-                var cent = ceil((ttl_c * 100) / parseInt((pokemon_getGrodex(pokemon)) + lld));
+        var ttt = 510 + 186;
+        ttt -= lld;
+        if (parseInt(lld) > 0) {
+            if (ttt > 0) {
+                var cent = ttt * 100;
+                var fnord = pokemon_getGrodex(pokemon) + lld;
+                cent = cent / fnord;
+                cent = Math.round(cent);
                 $("#more_tts").removeClass("invisible");
                 $("#more_tt").html(cent + "%");
             }
         }
 
-        */
+
 
 
         var ivs = pokemon.ivpv + pokemon.ivatk + pokemon.ivdef + pokemon.ivats + pokemon.ivdes + pokemon.ivspd;
-        if(ivs > 0)
-        {
+        if (ivs > 0) {
             var ivs_c = 510 - ivs;
-            if (ivs_c > 0)
-            {
+            if (ivs_c > 0) {
                 $("#more_ivs").removeClass("invisible");
                 $("#more_iv").html(ivs_c);
             }
@@ -316,8 +314,15 @@ function ok(etape)
 
         }
 
+    }
+    if (etape == 7) {
+
 
 
     }
 }
 
+function redirect()
+{
+    document.location.href = "index.html";
+}

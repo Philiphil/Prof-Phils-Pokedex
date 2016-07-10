@@ -50,7 +50,8 @@ function get_texte(string) {
     array['en']["error_stats"] = "NOT ENOUGHT DATA TO COMPARE";
     array['en']["zigurat_iv"] = "This pokemon needs more IVs :";
     array['en']["zigurat_ev"] = "This pokemon needs more EVs :";
-    array['en']["zigurat_tt"] = "EVS & IVS IMPACT IN YOUR POKEMON :";
-
+    array['en']["zigurat_tt"] = "EVS & IVS IMPACT TO YOUR POKEMON :";
+    array['en']['404'] = "Page not done, i require a big db before, press backspace";
+    array['en']['???'] = "???";
     return array[prefixe][string];
 }

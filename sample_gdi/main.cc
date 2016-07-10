@@ -9,6 +9,7 @@
 #include "type.h"
 #include "pokemon.h"
 #include "db.h"
+#include "info.h"
 #ifdef _WIN32
 #include <Windows.h>
 #endif
@@ -66,6 +67,10 @@ class GDISample : public Application::Listener {
 			  JSDelegateWithRetval(this, &GDISample::getComparable));
 
 		  method_dispatcher_.BindWithRetval(app_object,
+			  WSLit("getTypes"),
+			  JSDelegateWithRetval(this, &GDISample::getTypes));
+
+		  method_dispatcher_.BindWithRetval(app_object,
 			  WSLit("init"),
 			  JSDelegateWithRetval(this, &GDISample::init));
 	  }
@@ -85,6 +90,34 @@ class GDISample : public Application::Listener {
 	  app_->ShowMessage(bordel.c_str());
   }
 
+  JSValue getTypes(WebView* caller, const JSArray& args)
+  {
+	  JSValue fnord;
+	  WebString dayeum;
+	  std::string bordel;
+	  char* shiiit = new char();
+	  fnord = args.At(0);
+	  dayeum = fnord.ToString();
+	  dayeum.ToUTF8(shiiit, dayeum.length());
+	  bordel = shiiit;
+	  bordel = bordel.substr(0, dayeum.length());
+
+	  int foo = stoi(bordel);
+	  info types = pokemon::dbdex.at(foo);
+	  int typeun = (int) types.type1;
+	  int typede = (int)types.type2;
+	  std::string type1t = std::to_string(typeun);
+	  std::string type2t = std::to_string(typede);
+	  JSArray Justiceleague = JSArray();
+
+	  const char* cstr1= type1t.c_str();
+	  const char* cstr2 = type2t.c_str();
+	  Justiceleague.Push(WSLit(cstr1));
+	  Justiceleague.Push(WSLit(cstr2));
+
+	  JSValue retour = Justiceleague;
+	  return retour;
+  }
 
   void addPokemon(WebView* caller,
 	  const JSArray& args) {
@@ -139,11 +172,15 @@ class GDISample : public Application::Listener {
   JSValue init(WebView* caller, const JSArray& args)
   {
 	  dbinit();
+	  pokemon::dexinit();
 
 	  
 	  JSValue retour= JSValue(1);
 	  return retour;
   }
+
+
+
   // Inherited from Application::Listener
   virtual void OnUpdate() {
   }

@@ -2,6 +2,7 @@
 #include "type.h"
 #include "nature.h"
 #include <vector>
+#include "info.h"
 #include <string>
 
 class pokemon {
@@ -31,6 +32,9 @@ public:
 	nature nature1=(nature)0;
 	/**/
 	static std::vector<pokemon> pokedex;
+	static std::vector<info> dbdex;
+	static void dexinit();
+	static info getInfo(int);
 	pokemon() {};
 	/**/
 	bool hasIvs();

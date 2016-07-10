@@ -12,6 +12,8 @@
 
 using namespace std;
 
+string dbbfr;
+
 void pokemon_write(pokemon pkmn)
 {
 	ofstream db("pokedex.db", ios::app);
@@ -46,6 +48,7 @@ void dbinit()
 		pokemons[i].fromString(lignesdufichier[i]);
 		pokemon::pokedex.push_back(pokemons[i]);
 	}
+	delete lignesdufichier;
 	delete pokemons;
 	file.close();
 }

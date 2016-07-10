@@ -29,6 +29,7 @@
             </circle>
 
             <circle cx="110" cy="110" r="30" stroke="#000000" stroke-width="5" fill="none" />
+            <circle cx="110" cy="110" r="28" fill="white" />
             <circle cx="110" cy="110" r="20" />
             <line x1="10" y1="110" x2="210" y2="110" stroke="black" stroke-width="5">
                 <animateTransform attributeType="xml"
@@ -39,7 +40,7 @@
                                   dur="2s"
                                   repeatCount="indefinite" />
             </line>
-
+            <circle cx="110" cy="110" r="18" fill="white" />
 
         </svg>
 
@@ -67,8 +68,9 @@
     $(document).ready(function () {
         if (App.init())
         {
-            document.location.href = "index.html"
+            setTimeout(function () {
+                document.location.href = "index.html";
+            }, 1000);//It's preferable to wait a while -cause of animation -to be sure everything was loaded
         }
-
          });
 </script>
