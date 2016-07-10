@@ -48,7 +48,5 @@ void dbinit()
 		pokemons[i].fromString(lignesdufichier[i]);
 		pokemon::pokedex.push_back(pokemons[i]);
 	}
-	delete lignesdufichier;
-	delete pokemons;
 	file.close();
 }
