@@ -1,7 +1,6 @@
 **CPP POKEDEX  
-Please see https://philiphil.github.io/Prof-Phils-Pokedex/
-This page is not very uptodate
-**
+https://philiphil.github.io/Prof-Phils-Pokedex/
+
 
 **INTRO**
 
@@ -9,7 +8,7 @@ This is PROF PHILOU'S POKEDEX VERSION 1.0.1.1 (PPP for short).
 PPP is a CPP enhanced pokedex made for pokemmo especially.
 PPP allows you to add your pokemons to a local DB, then generates stats & stuffs about your pokemons
 
-Please notice that PPP has been made (and is being code) for pokemmo so only the first 3 generations are available.
+Please notice that PPP has been made for pokemmo so only the first 3 generations are available.
 
 **FEATURES**
 
